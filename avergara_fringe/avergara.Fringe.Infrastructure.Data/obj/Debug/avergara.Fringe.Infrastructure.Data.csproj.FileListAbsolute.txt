@@ -1,0 +1,10 @@
+C:\Users\anton\Desktop\Mochahost\fringe_antoniomanuelvergara\avergara_fringe\avergara.Fringe.Infrastructure.Data\bin\Debug\avergara.Fringe.Infrastructure.Data.dll
+C:\Users\anton\Desktop\Mochahost\fringe_antoniomanuelvergara\avergara_fringe\avergara.Fringe.Infrastructure.Data\bin\Debug\avergara.Fringe.Infrastructure.Data.pdb
+C:\Users\anton\Desktop\Mochahost\fringe_antoniomanuelvergara\avergara_fringe\avergara.Fringe.Infrastructure.Data\bin\Debug\avergara.Fringe.Transversal.Common.dll
+C:\Users\anton\Desktop\Mochahost\fringe_antoniomanuelvergara\avergara_fringe\avergara.Fringe.Infrastructure.Data\bin\Debug\System.Data.Common.dll
+C:\Users\anton\Desktop\Mochahost\fringe_antoniomanuelvergara\avergara_fringe\avergara.Fringe.Infrastructure.Data\bin\Debug\System.Data.SqlClient.dll
+C:\Users\anton\Desktop\Mochahost\fringe_antoniomanuelvergara\avergara_fringe\avergara.Fringe.Infrastructure.Data\bin\Debug\avergara.Fringe.Transversal.Common.pdb
+C:\Users\anton\Desktop\Mochahost\fringe_antoniomanuelvergara\avergara_fringe\avergara.Fringe.Infrastructure.Data\obj\Debug\avergara.Fringe.Infrastructure.Data.csprojResolveAssemblyReference.cache
+C:\Users\anton\Desktop\Mochahost\fringe_antoniomanuelvergara\avergara_fringe\avergara.Fringe.Infrastructure.Data\obj\Debug\avergara.Fringe.Infrastructure.Data.dll
+C:\Users\anton\Desktop\Mochahost\fringe_antoniomanuelvergara\avergara_fringe\avergara.Fringe.Infrastructure.Data\obj\Debug\avergara.Fringe.Infrastructure.Data.pdb
+C:\Users\anton\Desktop\Mochahost\fringe_antoniomanuelvergara\avergara_fringe\avergara.Fringe.Infrastructure.Data\bin\Debug\avergara.Fringe.Infrastructure.Data.dll.config

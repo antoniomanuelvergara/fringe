@@ -1,0 +1,157 @@
+﻿
+@{
+    Layout = "";
+}
+
+<div class="grilla">
+    <div class="container grilla-content">
+
+        <div id="list"></div>
+
+
+    </div>
+</div>
+
+    <link href="~/Content/grid/Site.css" rel="stylesheet" type="text/css" />
+
+    <link href="~/Content/vendor/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+    
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <script src="~/Content/grid/jquery-1.10.2.min.js"></script>
+    <script src="~/Content/grid/bootstrap.min.js"></script>
+
+    @*<script src="~/Scripts/jquery-1.10.2.min.js"></script>*@
+    <script src="~/Content/grid/jquery.anexgrid.js"></script>
+   
+      
+
+    <script>
+
+       $(document).ready(function () {
+          
+           //un callback
+           getCategories(function (categorias) {
+               //un callback dentro de un callback
+               getTypes(function (tipos) {             
+
+                   var dataGrid = {
+                       class: 'table-striped table-bordered table-condensed',
+                       columnas: [
+                           { leyenda: '', style: { width: '40px' }, class: 'text-center' },
+                           {
+                               leyenda: 'Id', style: 'width:10px;', ordenable: true, filtro: true, columna: 'Id'
+                           },
+
+                            { leyenda: 'Título', style: 'width:300px;', ordenable: true, filtro: true, columna: 'Title' },
+                           {
+                               leyenda: 'Categoria', style: 'width:120px;', columna: 'CurrentCategoryFringe',  ordenable: true,filtro: function () {
+                                   return anexGrid_select({
+                                       data: JSON.parse(categorias)
+                                   });
+                               }
+                           },
+                            {
+                                leyenda: 'Tipo', style: 'width:120px;', columna: 'CurrentTypeFringe', ordenable: true, filtro: function () {
+                                    return anexGrid_select({                                 
+                                            data: JSON.parse(tipos)                                        
+                                    });
+                                }
+                            }
+                           ,
+                           { leyenda: 'Fecha', style: 'width:100px;', ordenable: true, columna: 'UpdateDate' },
+                       ],
+                       modelo: [
+                           {
+                               class: 'text-center', formato: function (tr, obj, valor) {
+                                   return anexGrid_dropdown({
+                                       contenido: '<i class="glyphicon glyphicon-cog"></i>',
+                                       class: 'btn btn-primary btn-xs',
+                                       target: '_blank',
+                                       id: 'editar-' + obj.id,
+                                       data: [
+                                           { href: '#', contenido: 'Editar' },
+                                           { href: '#', contenido: 'Eliminar' }
+                                       ]
+                                   });
+                               }
+                           },
+                           { propiedad: 'Id' },   //aqui ponía { propiedad: 'Profesion.Nombre' }
+                           { propiedad: 'Title' },
+                           { propiedad: 'CurrentCategoryFringe' },
+                           { propiedad: 'CurrentTypeFringe' },
+                           { propiedad: 'UpdateDateString', class: 'text-right', },
+
+                       ],
+                       url: '@Url.Content("~/test/CargarFringes")',
+                       paginable: true,
+                       filtrable: true,
+                       limite: [20, 60, 100],
+                       columna: 'Id',
+                       columna_orden: 'ASC'
+
+
+                   }
+
+
+
+                   //añadimos la lista al div de HTML
+                   var grid = $("#list").anexGrid(dataGrid);
+               });
+               
+           });
+
+
+        //funcion que devuelve las categorias, lleva un callback
+        function getCategories(callback) {
+           
+            $.ajax({
+                dataType: 'json',
+                type: 'GET',
+                url: '@Url.Content("~/test/getCategories/")',
+                //data: "[]",
+                success: function (data) {
+                    //alert(JSON.stringify(data2));
+                   callback(JSON.stringify(data));
+                   //callback(data);
+
+                },
+                error: function (error) {
+                    alert('error');
+                }
+            });
+        }
+         
+           //funcion que devuelve los tipos, lleva un callback
+           function getTypes(callback) {
+           
+               $.ajax({
+                   dataType: 'json',
+                   type: 'GET',
+                   url: '@Url.Content("~/test/getTypes/")',
+                   //data: "[]",
+                   success: function (data) {                     
+                       callback(JSON.stringify(data));
+                       
+                   },
+                   error: function (error) {
+                       alert('error');
+                   }
+               });
+           }
+
+      
+
+
+       });
+
+
+
+
+
+
+    </script>
+
+
+
+

@@ -1,0 +1,9 @@
+﻿<Application x:Class="avergara.Fringe.Presentation.WPF.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:avergara.Fringe.Presentation.WPF"
+             StartupUri="FringeWindow.xaml">
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>

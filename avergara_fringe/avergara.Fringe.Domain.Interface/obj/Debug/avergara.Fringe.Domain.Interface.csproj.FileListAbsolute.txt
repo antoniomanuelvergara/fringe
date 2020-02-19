@@ -1,0 +1,7 @@
+C:\Users\anton\Desktop\Mochahost\fringe_antoniomanuelvergara\avergara_fringe\avergara.Fringe.Domain.Interface\bin\Debug\avergara.Fringe.Domain.Interface.dll
+C:\Users\anton\Desktop\Mochahost\fringe_antoniomanuelvergara\avergara_fringe\avergara.Fringe.Domain.Interface\bin\Debug\avergara.Fringe.Domain.Interface.pdb
+C:\Users\anton\Desktop\Mochahost\fringe_antoniomanuelvergara\avergara_fringe\avergara.Fringe.Domain.Interface\bin\Debug\avergara.Fringe.Domain.Entity.dll
+C:\Users\anton\Desktop\Mochahost\fringe_antoniomanuelvergara\avergara_fringe\avergara.Fringe.Domain.Interface\bin\Debug\avergara.Fringe.Domain.Entity.pdb
+C:\Users\anton\Desktop\Mochahost\fringe_antoniomanuelvergara\avergara_fringe\avergara.Fringe.Domain.Interface\obj\Debug\avergara.Fringe.Domain.Interface.csprojResolveAssemblyReference.cache
+C:\Users\anton\Desktop\Mochahost\fringe_antoniomanuelvergara\avergara_fringe\avergara.Fringe.Domain.Interface\obj\Debug\avergara.Fringe.Domain.Interface.dll
+C:\Users\anton\Desktop\Mochahost\fringe_antoniomanuelvergara\avergara_fringe\avergara.Fringe.Domain.Interface\obj\Debug\avergara.Fringe.Domain.Interface.pdb

@@ -1,0 +1,14 @@
+C:\Users\anton\Desktop\Mochahost\fringe_antoniomanuelvergara\avergara_fringe\avergara.Fringe.Transversal.Mapper\bin\Debug\avergara.Fringe.Transversal.Mapper.dll
+C:\Users\anton\Desktop\Mochahost\fringe_antoniomanuelvergara\avergara_fringe\avergara.Fringe.Transversal.Mapper\bin\Debug\avergara.Fringe.Transversal.Mapper.pdb
+C:\Users\anton\Desktop\Mochahost\fringe_antoniomanuelvergara\avergara_fringe\avergara.Fringe.Transversal.Mapper\bin\Debug\AutoMapper.dll
+C:\Users\anton\Desktop\Mochahost\fringe_antoniomanuelvergara\avergara_fringe\avergara.Fringe.Transversal.Mapper\bin\Debug\avergara.Fringe.Application.DTO.dll
+C:\Users\anton\Desktop\Mochahost\fringe_antoniomanuelvergara\avergara_fringe\avergara.Fringe.Transversal.Mapper\bin\Debug\avergara.Fringe.Domain.Entity.dll
+C:\Users\anton\Desktop\Mochahost\fringe_antoniomanuelvergara\avergara_fringe\avergara.Fringe.Transversal.Mapper\bin\Debug\System.ValueTuple.dll
+C:\Users\anton\Desktop\Mochahost\fringe_antoniomanuelvergara\avergara_fringe\avergara.Fringe.Transversal.Mapper\bin\Debug\avergara.Fringe.Application.DTO.pdb
+C:\Users\anton\Desktop\Mochahost\fringe_antoniomanuelvergara\avergara_fringe\avergara.Fringe.Transversal.Mapper\bin\Debug\avergara.Fringe.Domain.Entity.pdb
+C:\Users\anton\Desktop\Mochahost\fringe_antoniomanuelvergara\avergara_fringe\avergara.Fringe.Transversal.Mapper\bin\Debug\AutoMapper.pdb
+C:\Users\anton\Desktop\Mochahost\fringe_antoniomanuelvergara\avergara_fringe\avergara.Fringe.Transversal.Mapper\bin\Debug\AutoMapper.xml
+C:\Users\anton\Desktop\Mochahost\fringe_antoniomanuelvergara\avergara_fringe\avergara.Fringe.Transversal.Mapper\bin\Debug\System.ValueTuple.xml
+C:\Users\anton\Desktop\Mochahost\fringe_antoniomanuelvergara\avergara_fringe\avergara.Fringe.Transversal.Mapper\obj\Debug\avergara.Fringe.Transversal.Mapper.csprojResolveAssemblyReference.cache
+C:\Users\anton\Desktop\Mochahost\fringe_antoniomanuelvergara\avergara_fringe\avergara.Fringe.Transversal.Mapper\obj\Debug\avergara.Fringe.Transversal.Mapper.dll
+C:\Users\anton\Desktop\Mochahost\fringe_antoniomanuelvergara\avergara_fringe\avergara.Fringe.Transversal.Mapper\obj\Debug\avergara.Fringe.Transversal.Mapper.pdb

@@ -1,0 +1,4 @@
+C:\Users\anton\Desktop\Mochahost\fringe_antoniomanuelvergara\avergara_fringe\avergara.Fringe.Transversal.Logging\bin\Debug\avergara.Fringe.Transversal.Logging.dll
+C:\Users\anton\Desktop\Mochahost\fringe_antoniomanuelvergara\avergara_fringe\avergara.Fringe.Transversal.Logging\bin\Debug\avergara.Fringe.Transversal.Logging.pdb
+C:\Users\anton\Desktop\Mochahost\fringe_antoniomanuelvergara\avergara_fringe\avergara.Fringe.Transversal.Logging\obj\Debug\avergara.Fringe.Transversal.Logging.dll
+C:\Users\anton\Desktop\Mochahost\fringe_antoniomanuelvergara\avergara_fringe\avergara.Fringe.Transversal.Logging\obj\Debug\avergara.Fringe.Transversal.Logging.pdb

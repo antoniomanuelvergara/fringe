@@ -1,0 +1,103 @@
+﻿
+
+.container-fluid {
+   padding:15px;
+}
+
+
+.container {
+    padding:10px;
+}
+
+
+.col-med-auto {
+
+    padding:10px;
+}
+
+.border-right {
+    border-right: 0px solid #623f67!important;
+}
+
+.bg-dark {
+     background-color: #623f67!important; 
+}
+
+
+a.bg-dark:focus, a.bg-dark:hover, button.bg-dark:focus, button.bg-dark:hover {
+    background-color: #463865!important;
+}
+
+
+.btn-primary {
+    color: #fff;
+    background-color: #8773b1;
+    border-color:   #8773b1;
+}
+
+
+.btn-primary:hover {
+    color: #fff;
+    background-color:#463865;
+    border-color: #463865;
+}
+
+
+
+.grilla {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+      padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+a {
+    color: #115bab;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.mb-3, .my-3 {
+    color: #115bab;
+    font-size: 1.2rem;
+    
+}
+
+.badge-primary {
+    color: #000;
+    background-color: #ffc800;
+}
+
+
+.list-group-item:first-child {
+    border-top-left-radius: .0rem; 
+    border-top-right-radius: .0rem; 
+}
+.glyphicon-remove:before {
+
+    color: #d632c0;
+}
+
+
+.glyphicon-backward:before {
+    
+    color: #8773b1
+}
+
+.glyphicon-forward:before {
+       
+    color: #8773b1
+}
+
+.glyphicon-step-forward:before {
+   color: #8773b1;
+}
+
+.glyphicon-step-backward:before {
+    color: #8773b1;
+}
+
+
+

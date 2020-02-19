@@ -1,0 +1,292 @@
+﻿@model avergara.Fringe.Application.DTO.FringeDto
+@{
+
+    ICollection<avergara.Fringe.Application.DTO.CategoryFringeDto> categorias = ViewBag.Categorias;
+    ICollection<avergara.Fringe.Application.DTO.TypeFringeDto> tipos = ViewBag.Tipos;
+    ICollection<avergara.Fringe.Application.DTO.MediaDto> enlaces = ViewBag.Enlaces;
+ 
+
+}
+
+
+
+
+
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link active" href="#new" data-toggle="tab" id="tab-1">Fleco</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#list" data-toggle="tab" id="tab-2">Lista</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#comment" data-toggle="tab" id="tab-3" onclick="myFunction()">Contenido</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#media" data-toggle="tab" id="tab-4">Vista</a>
+        </li>
+    </ul>
+
+
+
+    <div class="tab-content">
+
+        <div class="tab-pane fade show active" id="new">
+
+
+
+
+            <div class="container-fluid">
+
+                <div class="row">
+                    <div class="col-4">
+                        <h4 class="mb-3">Fringe</h4>
+
+
+                        @using (Html.BeginForm("Create", "Fringe", FormMethod.Post, new { id = "frm-fringe" }))
+                        {
+                            @Html.AntiForgeryToken();  <!--para evitar el jakeo-->
+                            @Html.ValidationSummary(true);<!--para las validaciones-->
+
+                            <div class="form-group">
+                                @Html.LabelFor(x => x.Id)
+                                @Html.TextBoxFor(x => x.Id, new { readOnly = "readOnly", @class = "form-control fringe" })
+                                @Html.ValidationMessageFor(x => x.Id, null, new { @class = "label label-danger" })
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(x => x.Title)
+                                @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(x => x.Title, null, new { @class = "label label-danger" })
+                            </div>
+
+                            <div class="form-group">
+                                <label>Seleccione una Categoria</label>
+
+                                @Html.DropDownListFor(x => x.CategoryFringeId, new SelectList(@categorias, "Id", "Category"), "- Please Select -", new { @class = "form-control" })
+                                @Html.ValidationMessageFor(x => x.CategoryFringeId, null, new { @class = "label label-danger" })
+
+                            </div>
+
+                            <div class="form-group">
+                                <label>Seleccione un Tipo</label>
+
+                                @Html.DropDownListFor(x => x.TypeFringeId, new SelectList(@tipos, "Id", "Type"), "- Please Select -", new { @class = "form-control" })
+                                @Html.ValidationMessageFor(x => x.TypeFringeId, null, new { @class = "label label-danger" })
+
+                            </div>
+
+                            <div class="text-right">
+                                <button type="button" class="btn btn-info" onclick="DoReset()">Reset</button>
+                                <button data-ajax="true" data-confirm="¿Esta seguro de que desea crear Fringe?" type="submit" class="btn btn-primary">Save</button>
+                            </div>
+
+                        }
+
+                        <div class="form-group">
+                            <label></label>
+                            <input class="form-control valid" data-val-required="search" id="search" name="search" type="text">
+
+                        </div>
+
+                        <div class="text-right">
+                            <button type="button" class="btn btn-info" style="float: left;" id="send" name= 'send' onclick='GetIdSearch()'>Search</button>
+                            @{
+                                if (Model != null)
+                                {
+                                    <button  data-ajax="true" data-confirm="¿Esta seguro de que desea Eliminar Fringe?" type="button" class="btn btn-danger" style="float: right;" onclick="location.href='@Url.Action("Delete", "Fringe", new { id = Model.Id })';return false;">Delete</button>
+                                }
+                                else
+                                {
+                                    <button type="button" class="btn btn-danger" style="float: right;">Delete</button>
+                                }
+                            }
+                            
+                        </div>
+
+                      
+                    </div>
+                    <div class="col-5">
+                       @{
+                         if (Model != null)
+                         {
+
+                        <h4 class="mb-3">Contenidos</h4>
+                             }
+                         }
+
+                        <ul class="list-group">
+                          
+                           @{ 
+                               if (Model != null )
+                               {
+
+                          foreach (var comment in Model.Comment)
+                          {
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <a onclick="getView(@comment.Id)">@comment.Title</a>                                                                                    
+                                <span class="badge badge-primary badge-pill"><a onclick="getView(@comment.Id)">@comment.Id</a></span>
+                            </li>
+
+
+                          }
+
+                                   }
+                               }
+
+
+                        </ul>
+
+
+
+
+                    </div>
+
+                    <!--fin primera pestaña-->
+
+
+                    
+                </div>
+            </div>
+
+
+
+
+        </div>
+       
+        <div class="tab-pane fade" id="list">
+           
+             @Html.Partial("_FringeList");
+
+        </div>
+
+        <div class="tab-pane fade" id="comment">
+   
+            @Html.Partial("_CommentPartial", new avergara.Fringe.Application.DTO.CommentDto());
+
+
+        </div>
+
+        <div class="tab-pane fade" id="media">
+
+            <script>
+		hljs.initHighlightingOnLoad();
+		hljs.initLineNumbersOnLoad();
+            </script>
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-9">
+                       @{
+                           if (Model != null)
+                           {
+                          <h4 class="mb-3">@Model.Title</h4>
+
+
+                               foreach (var comment in Model.Comment)
+                               {
+
+                                   if (comment.TypeCommentId == 1)
+                                   {
+                                <div class="alert hljs"  style="background-color:#dcedef;" role="alert">
+                                    <h6 class="alert-heading">@comment.Title</h6>
+                                    <pre class="hljs" style="background-color:#dcedef;">@comment.Comentario</pre>                                 
+                                    <p class="mb-0"><span class="badge badge-primary badge-pill"><a  onclick="getView2(@comment.Id)">Editar</a></span></p>
+                                    <hr>
+                                </div>
+                                   }
+                                   else
+                                   {
+                                    <div class="alert hljs" role="alert">
+                                        <h6 class="alert-heading">@comment.Title</h6>
+                                        <pre><code class="cs hljs">@comment.Comentario</code></pre>
+                                        <p class="mb-0"><span class="badge badge-primary badge-pill"><a  onclick="getView2(@comment.Id)">Editar</a></span></p>
+                                        <hr>
+                                    </div>
+                                   }
+
+
+                               }
+
+                           }
+                    }
+
+
+
+
+                    </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            </div>
+
+
+<script>
+
+    function getView(idnumber) {
+     
+        $('#comment').load('@Url.Content("~/Fringe/GetView/")' + idnumber);
+          
+        $('#tab-1').removeClass('active');      
+        $('#new').removeClass('show active');
+
+        $('#tab-3').addClass('active');
+        $('#comment').addClass('show active');
+
+        
+    }
+
+
+    function getView2(idnumber) {
+
+        $('#comment').load('@Url.Content("~/Fringe/GetView/")' + idnumber);
+
+        $('#tab-4').removeClass('active');
+        $('#media').removeClass('show active');
+
+        $('#tab-3').addClass('active');
+        $('#comment').addClass('show active');
+
+
+    }
+
+                // $(document).ready(function () {  //esto no se puede poner
+                function GetIdSearch() {
+                    var idnumber = $("#search").val();
+                    //location.href = '/fringe.antoniomanuelvergara.com/Fringe/Index/' + idnumber;
+                    location.href = '@Url.Content("~/Fringe/Index/")' + idnumber;
+
+                    return false;
+                }
+
+
+                function DoReset() {
+                    $('#Id').val("");
+                    $('#Title').val("");
+                    $("#CategoryFringeId option:first-child").attr("selected", true);
+                    $("#TypeFringeId option:first-child").attr("selected", true);
+                    return false;
+                }           
+
+
+                function myFunction()
+                {
+                    document.querySelector("#Id.form-control.comment").value = '';
+
+                    var idfringe = document.querySelector("#Id.form-control.fringe").value;
+
+                    document.querySelector("#FringeId.form-control.comment").value = idfringe;
+
+                    $('#Title.form-control.comment').val("");
+                    $('#Comentario.form-control.comment').val("");
+                    $("#TypeCommentId.form-control.comment option:first-child").attr("selected", true);
+
+                }
+
+            </script>
+
+

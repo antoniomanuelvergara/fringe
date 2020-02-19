@@ -1,0 +1,4 @@
+C:\Users\anton\Desktop\Mochahost\fringe_antoniomanuelvergara\avergara_fringe\avergara.Fringe.Application.DTO\bin\Debug\avergara.Fringe.Application.DTO.dll
+C:\Users\anton\Desktop\Mochahost\fringe_antoniomanuelvergara\avergara_fringe\avergara.Fringe.Application.DTO\bin\Debug\avergara.Fringe.Application.DTO.pdb
+C:\Users\anton\Desktop\Mochahost\fringe_antoniomanuelvergara\avergara_fringe\avergara.Fringe.Application.DTO\obj\Debug\avergara.Fringe.Application.DTO.dll
+C:\Users\anton\Desktop\Mochahost\fringe_antoniomanuelvergara\avergara_fringe\avergara.Fringe.Application.DTO\obj\Debug\avergara.Fringe.Application.DTO.pdb

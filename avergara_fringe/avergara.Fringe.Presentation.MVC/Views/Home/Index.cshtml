@@ -1,0 +1,104 @@
+﻿@model IEnumerable<avergara.Fringe.Application.DTO.FringeDto>
+@{
+    ViewBag.Title = "Home Page";
+    //IEnumerable<avergara.Fringe.Application.DTO.FringeDto> fringes = ViewBag.fringes;
+}
+
+
+
+
+
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col-med-auto">
+            <h4 class="mb-3">Fringe</h4>
+            <form>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Identificador</label>
+                    <input class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Número">
+                </div>
+
+
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Fringe</label>
+                    <input class="form-control" id="exampleInputPassword1" placeholder="Título">
+                </div>
+
+                <div class="form-group">
+                    <label for="inputState">Categoria</label>
+                    <select id="inputState" class="form-control">
+                        <option selected>Selecionar...</option>
+                        <option>...</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputState">Tipo</label>
+                    <select id="inputState" class="form-control">
+                        <option selected>Selecionar...</option>
+                        <option>...</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Save</button>
+                <button type="button" class="btn btn-primary">Find</button>
+            </form>
+
+
+            <div class="container-fluid">
+
+
+
+                <ul>
+
+                    @foreach (var a in Model)
+                    {
+                        <li>
+                            id:  @a.Id  categoria : @a.CategoryFringeId  titulo: @a.Title
+                        </li>
+
+                    }
+
+                </ul>
+
+            </div>
+
+
+        </div>
+        <div class="col-med-auto">
+            <h4 class="mb-3">Textos</h4>
+            <ul class="list-group">
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Cras justo odio
+                    <span class="badge badge-primary badge-pill">14</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Dapibus ac facilisis in  dfscsdcvfswdvf  ewfwfg3rewvgfew
+                    <span class="badge badge-primary badge-pill">2</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Morbi leo risus
+                    <span class="badge badge-primary badge-pill">1</span>
+                </li>
+            </ul>
+        </div>
+        <div class="col-med-auto">
+            <h4 class="mb-3">Imagenes</h4>
+            <ul class="list-group">
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Cras justo odio
+                    <span class="badge badge-primary badge-pill">14</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Dapibus ac facilisis in  dfscsdcvfswdvf  ewfwfg3rewvgfew
+                    <span class="badge badge-primary badge-pill">2</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Morbi leo risus
+                    <span class="badge badge-primary badge-pill">1</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

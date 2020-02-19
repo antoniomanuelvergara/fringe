@@ -1,0 +1,16 @@
+C:\Users\anton\Desktop\Mochahost\fringe_antoniomanuelvergara\avergara_fringe\avergara.Fringe.Infrastructure.Repository\bin\Debug\avergara.Fringe.Infrastructure.Repository.dll
+C:\Users\anton\Desktop\Mochahost\fringe_antoniomanuelvergara\avergara_fringe\avergara.Fringe.Infrastructure.Repository\bin\Debug\avergara.Fringe.Infrastructure.Repository.pdb
+C:\Users\anton\Desktop\Mochahost\fringe_antoniomanuelvergara\avergara_fringe\avergara.Fringe.Infrastructure.Repository\bin\Debug\avergara.Fringe.Domain.Entity.dll
+C:\Users\anton\Desktop\Mochahost\fringe_antoniomanuelvergara\avergara_fringe\avergara.Fringe.Infrastructure.Repository\bin\Debug\avergara.Fringe.Infrastructure.Data.dll
+C:\Users\anton\Desktop\Mochahost\fringe_antoniomanuelvergara\avergara_fringe\avergara.Fringe.Infrastructure.Repository\bin\Debug\avergara.Fringe.Infrastructure.Interface.dll
+C:\Users\anton\Desktop\Mochahost\fringe_antoniomanuelvergara\avergara_fringe\avergara.Fringe.Infrastructure.Repository\bin\Debug\avergara.Fringe.Transversal.Common.dll
+C:\Users\anton\Desktop\Mochahost\fringe_antoniomanuelvergara\avergara_fringe\avergara.Fringe.Infrastructure.Repository\bin\Debug\Dapper.dll
+C:\Users\anton\Desktop\Mochahost\fringe_antoniomanuelvergara\avergara_fringe\avergara.Fringe.Infrastructure.Repository\bin\Debug\avergara.Fringe.Domain.Entity.pdb
+C:\Users\anton\Desktop\Mochahost\fringe_antoniomanuelvergara\avergara_fringe\avergara.Fringe.Infrastructure.Repository\bin\Debug\avergara.Fringe.Infrastructure.Data.pdb
+C:\Users\anton\Desktop\Mochahost\fringe_antoniomanuelvergara\avergara_fringe\avergara.Fringe.Infrastructure.Repository\bin\Debug\avergara.Fringe.Infrastructure.Interface.pdb
+C:\Users\anton\Desktop\Mochahost\fringe_antoniomanuelvergara\avergara_fringe\avergara.Fringe.Infrastructure.Repository\bin\Debug\avergara.Fringe.Transversal.Common.pdb
+C:\Users\anton\Desktop\Mochahost\fringe_antoniomanuelvergara\avergara_fringe\avergara.Fringe.Infrastructure.Repository\bin\Debug\Dapper.xml
+C:\Users\anton\Desktop\Mochahost\fringe_antoniomanuelvergara\avergara_fringe\avergara.Fringe.Infrastructure.Repository\obj\Debug\avergara.Fringe.Infrastructure.Repository.csprojResolveAssemblyReference.cache
+C:\Users\anton\Desktop\Mochahost\fringe_antoniomanuelvergara\avergara_fringe\avergara.Fringe.Infrastructure.Repository\obj\Debug\avergara.Fringe.Infrastructure.Repository.dll
+C:\Users\anton\Desktop\Mochahost\fringe_antoniomanuelvergara\avergara_fringe\avergara.Fringe.Infrastructure.Repository\obj\Debug\avergara.Fringe.Infrastructure.Repository.pdb
+C:\Users\anton\Desktop\Mochahost\fringe_antoniomanuelvergara\avergara_fringe\avergara.Fringe.Infrastructure.Repository\bin\Debug\avergara.Fringe.Infrastructure.Repository.dll.config

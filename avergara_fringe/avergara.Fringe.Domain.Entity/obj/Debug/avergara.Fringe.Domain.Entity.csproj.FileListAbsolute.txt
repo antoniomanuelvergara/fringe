@@ -1,0 +1,4 @@
+C:\Users\anton\Desktop\Mochahost\fringe_antoniomanuelvergara\avergara_fringe\avergara.Fringe.Domain.Entity\bin\Debug\avergara.Fringe.Domain.Entity.dll
+C:\Users\anton\Desktop\Mochahost\fringe_antoniomanuelvergara\avergara_fringe\avergara.Fringe.Domain.Entity\bin\Debug\avergara.Fringe.Domain.Entity.pdb
+C:\Users\anton\Desktop\Mochahost\fringe_antoniomanuelvergara\avergara_fringe\avergara.Fringe.Domain.Entity\obj\Debug\avergara.Fringe.Domain.Entity.dll
+C:\Users\anton\Desktop\Mochahost\fringe_antoniomanuelvergara\avergara_fringe\avergara.Fringe.Domain.Entity\obj\Debug\avergara.Fringe.Domain.Entity.pdb

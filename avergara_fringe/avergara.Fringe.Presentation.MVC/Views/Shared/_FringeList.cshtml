@@ -1,0 +1,134 @@
+﻿
+
+
+
+        <div id="list"></div>
+
+
+<script>
+
+       $(document).ready(function () {
+
+           //un callback
+           getCategories(function (categorias) {
+               //un callback dentro de un callback
+               getTypes(function (tipos) {
+
+                   var dataGrid = {
+                       class: 'table-striped table-bordered table-condensed',
+                       columnas: [
+                           { leyenda: '', style: { width: '40px' }, class: 'text-center' },
+                           {
+                               leyenda: 'Id', style: 'width:10px;', ordenable: true, filtro: true, columna: 'Id'
+                           },
+
+                            { leyenda: 'Título', style: 'width:300px;', ordenable: true, filtro: true, columna: 'Title' },
+                           {
+                               leyenda: 'Categoria', style: 'width:120px;', columna: 'CurrentCategoryFringe',  ordenable: true,filtro: function () {
+                                   return anexGrid_select({
+                                       data: JSON.parse(categorias)
+                                   });
+                               }
+                           },
+                            {
+                                leyenda: 'Tipo', style: 'width:120px;', columna: 'CurrentTypeFringe', ordenable: true, filtro: function () {
+                                    return anexGrid_select({
+                                            data: JSON.parse(tipos)
+                                    });
+                                }
+                            }
+                           ,
+                           { leyenda: 'Fecha', style: 'width:100px;', ordenable: true, columna: 'UpdateDate' },
+                       ],
+                       modelo: [
+                           {
+                               class: 'text-center', formato: function (tr, obj, valor) {
+                                   return anexGrid_dropdown({
+                                       contenido: '<i class="glyphicon glyphicon-cog"></i>',
+                                       class: 'btn btn-primary btn-xs',
+                                       //target: '_blank',
+                                       //id: 'editar-' + obj.id,
+                                       data: [
+                                           { href: '@Url.Content("~/fringe/Index/")' + obj.Id, contenido: 'Editar' },
+                                            { href: '@Url.Content("~/fringe/Delete/")' + obj.Id, contenido: 'Eliminar' },
+                                       ]
+                                   });
+                               }
+                           },
+                           { propiedad: 'Id' },   //aqui ponía { propiedad: 'Profesion.Nombre' }
+                           { propiedad: 'Title' },
+                           { propiedad: 'CurrentCategoryFringe' },
+                           { propiedad: 'CurrentTypeFringe' },
+                           { propiedad: 'UpdateDateString', class: 'text-right', },
+
+                       ],
+                       url: '@Url.Content("~/fringe/CargarFringes")',
+                       paginable: true,
+                       filtrable: true,
+                       limite: [20, 60, 100],
+                       columna: 'Id',
+                       columna_orden: 'ASC'
+
+
+                   }
+
+
+
+                   //añadimos la lista al div de HTML
+                   var grid = $("#list").anexGrid(dataGrid);
+               });
+
+           });
+
+
+        //funcion que devuelve las categorias, lleva un callback
+        function getCategories(callback) {
+
+            $.ajax({
+                dataType: 'json',
+                type: 'GET',
+                url: '@Url.Content("~/fringe/getCategories/")',
+                //data: "[]",
+                success: function (data) {
+                    //alert(JSON.stringify(data2));
+                   callback(JSON.stringify(data));
+                   //callback(data);
+
+                },
+                error: function (error) {
+                    alert('error');
+                }
+            });
+        }
+
+           //funcion que devuelve los tipos, lleva un callback
+           function getTypes(callback) {
+
+               $.ajax({
+                   dataType: 'json',
+                   type: 'GET',
+                   url: '@Url.Content("~/fringe/getTypes/")',
+                   //data: "[]",
+                   success: function (data) {
+                       callback(JSON.stringify(data));
+
+                   },
+                   error: function (error) {
+                       alert('error');
+                   }
+               });
+           }
+
+
+
+
+       });
+
+
+
+
+
+
+</script>
+
+

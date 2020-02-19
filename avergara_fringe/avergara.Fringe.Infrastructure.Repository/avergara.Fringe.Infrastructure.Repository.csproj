@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C7035C2D-1679-4D05-8ED6-96E266C4244C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>avergara.Fringe.Infrastructure.Repository</RootNamespace>
+    <AssemblyName>avergara.Fringe.Infrastructure.Repository</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dapper, Version=1.60.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.1.60.6\lib\net451\Dapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="base\DapperRepositoryBase.cs" />
+    <Compile Include="CategoryFringeRepository.cs" />
+    <Compile Include="CommentRepository.cs" />
+    <Compile Include="FringeRepository.cs" />
+    <Compile Include="MediaRepository.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TypeCommentRepository.cs" />
+    <Compile Include="TypeFringeRepository.cs" />
+    <Compile Include="TypeMediaRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\avergara.Fringe.Domain.Entity\avergara.Fringe.Domain.Entity.csproj">
+      <Project>{65412e2c-999a-4a15-a486-941fc31ce932}</Project>
+      <Name>avergara.Fringe.Domain.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\avergara.Fringe.Infrastructure.Data\avergara.Fringe.Infrastructure.Data.csproj">
+      <Project>{d7bb4b2a-3e1d-4f4f-b11d-0d719f774eb3}</Project>
+      <Name>avergara.Fringe.Infrastructure.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\avergara.Fringe.Infrastructure.Interface\avergara.Fringe.Infrastructure.Interface.csproj">
+      <Project>{db1b6d23-9773-4236-a715-292ac085d296}</Project>
+      <Name>avergara.Fringe.Infrastructure.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\avergara.Fringe.Transversal.Common\avergara.Fringe.Transversal.Common.csproj">
+      <Project>{c9594a1c-908a-4c9f-af33-b7185913092f}</Project>
+      <Name>avergara.Fringe.Transversal.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

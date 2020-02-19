@@ -1,0 +1,60 @@
+﻿<Window x:Class="avergara.Fringe.Presentation.WPF.FringeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:avergara.Fringe.Presentation.WPF"
+        mc:Ignorable="d"
+        Title="FringeWindow" Height="500" Width="800">
+    <Window.Resources>
+        <ResourceDictionary>
+            <Style x:Key="estiloBotonSave" TargetType="Button">
+                <Setter Property="Background" Value="Blue"></Setter>
+                <Setter Property="Foreground" Value="White"></Setter>
+                <Setter Property="Width" Value="80"></Setter>
+                <Setter Property="Height" Value="40"></Setter>
+            </Style>
+            <ControlTemplate x:Key="botonCircular" TargetType="Button">
+                <Grid>
+                    <Ellipse Fill="{TemplateBinding Background}"/>
+                </Grid>
+            </ControlTemplate>
+        </ResourceDictionary>
+        
+    </Window.Resources>
+    <Grid>
+        <Label Content="Fringe" HorizontalAlignment="Left" Margin="54,9,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
+        
+        <Label Content="Id" HorizontalAlignment="Left" Height="26" Margin="58,33,0,0" VerticalAlignment="Top" Width="63"/>
+        <TextBox x:Name="TbId" Text="{Binding FringeDto.Id}" HorizontalAlignment="Left" Height="23" Margin="59,60,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="307"/>
+        
+        <Label Content="Titulo" HorizontalAlignment="Left" Height="26" Margin="58,96,0,0" VerticalAlignment="Top" Width="63"/>
+        <TextBox x:Name="TbTitulo" Text="{Binding FringeDto.Title}" HorizontalAlignment="Left" Height="23" Margin="59,123,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="307"/>
+
+        <Label Content="Seleccione una Categoría" HorizontalAlignment="Left" Height="26" Margin="61,147,0,0" VerticalAlignment="Top" Width="147"/>
+        <ComboBox  ItemsSource="{Binding Path=FringeDto.CategoryFringe}" 
+                   SelectedValue="{Binding Path=FringeDto.CategoryFringeId}"
+                   SelectedIndex="{Binding Path=FringeDto.CategoryFringeId}"
+                   DisplayMemberPath="Category" SelectedValuePath="Id"                   
+                   HorizontalAlignment="Left" Height="21" Margin="59,176,0,0" VerticalAlignment="Top" Width="306">
+        </ComboBox>
+
+        <Label Content="Seleccione una Tipo" HorizontalAlignment="Left" Height="26" Margin="61,207,0,0" VerticalAlignment="Top" Width="147"/>
+        <ComboBox HorizontalAlignment="Left" Height="21" Margin="61,236,0,0" VerticalAlignment="Top" Width="306"/>
+
+        <Button Content="Reset" Template="{StaticResource botonCircular}" Background="Red" HorizontalAlignment="Left" Margin="239,267,0,0" VerticalAlignment="Top" Width="35" Height="35"/>
+        <Button Content="Save" Style="{StaticResource estiloBotonSave}" HorizontalAlignment="Left" Margin="284,264,0,0" VerticalAlignment="Top"  />
+       
+        <Button Content="Search" HorizontalAlignment="Left" Margin="59,344,0,0" VerticalAlignment="Top" Width="75" Command="{Binding BuscarFringe}"/>
+        <TextBox Text="{Binding IdSearch, Mode=TwoWay}" HorizontalAlignment="Left" Height="23" Margin="58,311,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="307"/>
+        <Button Content="Delete" HorizontalAlignment="Left" Margin="290,344,0,0" VerticalAlignment="Top" Width="75"/>
+        <Expander Header="Expander" HorizontalAlignment="Left" Margin="848,322,-156,0" VerticalAlignment="Top" Width="100">
+            <Grid Background="#FFE5E5E5"/>
+        </Expander>
+        <TextBox Text="{Binding FringeDto.CategoryFringeId}" HorizontalAlignment="Left" Height="49" Margin="602,166,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="88"/>
+
+
+    </Grid>
+
+
+</Window>
